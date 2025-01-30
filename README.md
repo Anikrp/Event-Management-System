@@ -1,136 +1,135 @@
 # Event Management System
 
-A comprehensive web-based event management system built with PHP and MySQL. This system allows organizations to efficiently manage events, handle attendee registrations, and generate insightful reports.
+A streamlined web-based event management system built with PHP and MySQL. This system enables users to efficiently create and manage events, handle attendee registrations, and generate event reports.
 
-## 🚀 Features
+## 🎯 Objective
 
-- **User Management**
-  - Secure authentication (Login/Registration)
-  - User profile management
-  - Role-based access control
-- **Event Operations**
-  - Create, view, update, and delete events
-  - Event categorization and tagging
-  - Rich text event descriptions
+To provide a simple yet effective event management solution that focuses on core functionalities:
+- User authentication and security
+- Event creation and management
+- Attendee registration with capacity control
+- Event dashboard with advanced filtering
+- Report generation capabilities
+
+## 🚀 Core Features
+
+- **User Authentication**
+  - Secure login and registration system
+  - Password hashing for security
+  - Session-based authentication
+  
+- **Event Management**
+  - Create new events with detailed information
+  - View event listings and details
+  - Update existing event information
+  - Delete unwanted events
+  - Event details include:
+    - Event name
+    - Description
+    - Date and time
+    - Location
+    - Maximum capacity
+    
 - **Attendee Management**
-  - Easy registration process
-  - Attendee tracking
-  - Email notifications
-- **Dashboard & Analytics**
-  - Intuitive dashboard interface
-  - Advanced filtering and sorting
-  - Pagination for better performance
-  - Comprehensive event reports
-  - CSV export functionality
+  - Simple registration form
+  - Automatic capacity tracking
+  - Registration validation
+  - Prevents overbooking
+  
+- **Dashboard Features**
+  - Paginated event display
+  - Sort events by various criteria
+  - Filter events by:
+    - Date
+    - Status
+    - Capacity
+  - Real-time capacity tracking
+  
+- **Reporting System**
+  - Generate attendee lists
+  - Export reports to CSV format
+  - Filter report data
+  - Admin-only access to reports
 
-## 🔧 Prerequisites
+## 🔧 Technical Requirements
 
 - PHP 7.4 or higher
 - MySQL 5.7 or higher
 - Apache Web Server
 - Web browser with JavaScript enabled
-- Composer (for dependency management)
-- XAMPP/WAMP/MAMP (recommended for local development)
 
-## 📥 Installation
+## 📥 Quick Setup
 
-1. **Clone the Repository**
+1. **Database Configuration**
    ```bash
-   git clone https://github.com/yourusername/event-management-system.git
-   cd event-management-system
+   # Import database schema
+   mysql -u your_username -p your_database_name < database/schema.sql
    ```
 
-2. **Database Setup**
-   - Create a new MySQL database
-   - Import the database schema:
-     ```bash
-     mysql -u your_username -p your_database_name < database/schema.sql
-     ```
-   - Copy `config/database.example.php` to `config/database.php`
-   - Update database credentials in `config/database.php`
+2. **Application Setup**
+   - Configure database connection in `config/database.php`
+   - Ensure proper directory permissions
+   - Set up your web server configuration
 
-3. **Configure Environment**
-   - Ensure the `uploads` directory has write permissions:
-     ```bash
-     chmod 755 uploads/
-     ```
-   - Configure your web server to point to the project directory
+3. **First Time Access**
+   - Register an account
+   - Log in to access the dashboard
+   - Start creating events
 
-4. **Install Dependencies**
-   ```bash
-   composer install
-   ```
-
-## 🚦 Usage
-
-1. **Access the Application**
-   - Open your web browser and navigate to the project URL
-   - For local development: `http://localhost/event-management-system`
-
-2. **Initial Setup**
-   - Register a new admin account
-   - Log in using your credentials
-   - Start creating and managing events
-
-3. **Key Operations**
-   - Create new events via the dashboard
-   - Manage attendee registrations
-   - Generate and export reports
-   - Update user profile and settings
-
-## 📁 Project Structure
+## 📁 System Structure
 
 ```
 event-management-system/
-├── api/              # API endpoints
-├── assets/           # Static resources (CSS, JS, images)
-│   ├── css/         # Stylesheet files
-│   ├── js/          # JavaScript files
-│   └── images/      # Image assets
+├── assets/           # CSS and JavaScript files
 ├── config/          # Configuration files
-├── database/        # Database schema and migrations
-├── includes/        # PHP classes and helper functions
-├── uploads/         # User uploaded files
+├── database/        # Database schema
+├── includes/        # PHP helper functions
 └── views/           # PHP view templates
 ```
 
-## 🔒 Security Features
+## 💡 Key Features Usage
 
-- Secure password hashing with bcrypt
-- Protection against SQL injection using prepared statements
-- XSS prevention through input sanitization
-- CSRF token validation
-- Secure session management
-- Rate limiting for API endpoints
+1. **Event Creation**
+   - Log in to your account
+   - Navigate to "Create Event"
+   - Fill in event details
+   - Set maximum capacity
+   - Save event
 
-## 🐛 Troubleshooting
+2. **Managing Registrations**
+   - View registered attendees
+   - Track available capacity
+   - Export attendee lists
 
-Common issues and solutions:
+3. **Generating Reports**
+   - Access admin dashboard
+   - Select event for reporting
+   - Choose export format (CSV)
+   - Download report
 
-1. **Database Connection Failed**
-   - Verify database credentials in `config/database.php`
-   - Ensure MySQL service is running
+## 🔒 Security Measures
 
-2. **Upload Errors**
-   - Check `uploads` directory permissions
-   - Verify PHP file upload settings in `php.ini`
+- Secure password hashing
+- SQL injection prevention
+- Input validation
+- Session security
+- CSRF protection
 
-3. **Blank Page**
-   - Enable PHP error reporting in development
-   - Check PHP error logs
+## 🐛 Common Issues
 
-## 🤝 Contributing
+1. **Registration Issues**
+   - Check event capacity
+   - Verify registration deadlines
+   - Ensure all required fields are filled
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. **Database Connection**
+   - Verify database credentials
+   - Check MySQL service status
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License
 
-## 📧 Support
+## 📞 Support
 
-For support and queries, please create an issue in the GitHub repository or contact the development team.
+For technical support or queries, please create an issue in the repository.
