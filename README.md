@@ -1,6 +1,16 @@
 # Event Management System
 
-A streamlined web-based event management system built with PHP and MySQL. This system enables users to efficiently create and manage events, handle attendee registrations, and generate event reports.
+The goal of this project is to develop a simple, web-based event management system that allows users to create, manage, and view events, as well as register attendees and generate event reports.
+
+
+## 🌐 Live Demo
+
+Check out the live demo: [Event Management System](http://evently.unaux.com/)
+
+### Testing Credentials
+- Username: anik
+- Password: 00000000
+
 
 ## 🎯 Objective
 
